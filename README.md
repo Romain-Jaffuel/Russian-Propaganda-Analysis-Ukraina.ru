@@ -8,28 +8,9 @@ Map and characterize narratives on ukraina.ru (History / Opinion / Interview). T
 - Raw and cleaned data in JSON/CSV
 - External samples for propaganda/fake-news experiments
 
-## Repository layout (key items)
-- datasets_propaganda/ — external corpora (propaganda/fake-news)
-- Graph/ — exported figures
-- logs/ — execution logs
-- Ressources/ — auxiliary resources
-- RoBERTa pretrained/ — pre-trained weights
-- articles_content_historia|opinion|interview.json — raw content
-- articles_historia|opinion|interview.csv — meta indexes
-- data_cleaned_historia.json, data_cleaned_opinion.json — cleaned corpora
-- Scraping_*.ipynb — scraping
-- Data_Cleaning_*.ipynb — text cleaning
-- Data_Visualization.ipynb — plots
-- Diachronical Analysis.ipynb — time series
-- LDA (attempt).ipynb, LDA_Butcha.ipynb — topic modeling
-- Sentiment Analysis.ipynb — polarity
-- Unsupervised_Clustering.ipynb — embeddings + clustering
-- modelFakeNews.ipynb, finetuning_ruBERT_propaganda.ipynb — propaganda classifiers
-- Translate_SemEval2020Database.ipynb, semeval_translated_dataset.jsonl — external data prep
-
 ## What works (priority)
 
-### Scrape → clean pipeline
+### Scraping & cleaning pipeline
 - Section-wise scraping to JSON/CSV
 - Cleaning: HTML strip, unicode normalization, boilerplate removal, sentence splitting, lowercasing, language detection, simple dedup
 - Consolidated outputs in data_cleaned_*.json for History and Opinion
